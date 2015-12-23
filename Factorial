@@ -1,0 +1,9 @@
+var N = 5;
+
+function start(){
+    var total = 1;
+	for ( var i = N; i > 0;i--){
+	   total *= i
+	}
+	println (total)
+}

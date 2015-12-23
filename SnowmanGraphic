@@ -1,0 +1,51 @@
+/* Constants representing the radius of the top, middle,
+ * and bottom snowball. */
+var BOTTOM_RADIUS = 100;
+var MID_RADIUS = 60;
+var TOP_RADIUS = 30;
+var centerX = getWidth()/2;
+
+function start(){
+	bottom_circle();
+	middle_circle();
+	top_circle();
+	left_eye();
+	right_eye();
+}
+
+function bottom_circle(){
+    var bottom =  new Circle(BOTTOM_RADIUS);
+	bottom.setPosition (centerX,getHeight()-BOTTOM_RADIUS) ;
+	bottom.setColor(Color.gray);
+	add(bottom);
+}
+	
+function middle_circle(){
+	var middle =  new Circle(MID_RADIUS);
+	middle.setPosition (centerX,getHeight()-BOTTOM_RADIUS*2 -MID_RADIUS) ;
+	middle.setColor(Color.gray);
+	add(middle);
+}
+
+function top_circle(){
+	var top =  new Circle(TOP_RADIUS);
+	top.setPosition (centerX,getHeight()-BOTTOM_RADIUS*2 - MID_RADIUS*2- TOP_RADIUS) ;
+	top.setColor(Color.gray);
+	add(top);
+}
+
+function left_eye(){
+	var le =  new Circle(5);
+	centerX= getWidth()/2;
+	le.setPosition (centerX-15,119) ;
+	le.setColor(Color.black);
+	add(le);
+}
+
+function right_eye(){
+	var re = new Circle(5);
+	centerX= getWidth()/2;
+	re.setPosition (centerX+15,119) ;
+	re.setColor(Color.black);
+	add(re);
+}
