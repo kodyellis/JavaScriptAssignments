@@ -1,0 +1,6 @@
+function start(){
+	var dice1 = readInt ("What is the number of the first die roll? ");
+	var dice2 = readInt ("What is the number of the first die roll? ");
+	var rolledDice = dice1 == dice2;
+	println ("Did you roll doubles? " + rolledDice);
+}
