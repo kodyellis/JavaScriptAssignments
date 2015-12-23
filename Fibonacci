@@ -1,0 +1,13 @@
+var MAX = 1000;
+
+function start(){
+    var present = 1;
+    var past = 0;
+    var future = 0;
+    while (present < MAX){
+        println(present);
+        future = present + past;
+        past = present;
+        present = future;
+    }
+}
